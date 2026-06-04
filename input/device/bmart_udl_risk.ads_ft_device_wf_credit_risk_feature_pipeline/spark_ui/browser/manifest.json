@@ -1,0 +1,35 @@
+{
+  "base_url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1043091/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+  "pages": [
+    {
+      "page": "environment",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1043091/environment/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "S3DefaultJobName - Environment",
+      "file_name": "browser/environment.txt"
+    },
+    {
+      "page": "jobs",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1043091/jobs/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "S3DefaultJobName - Spark Jobs",
+      "file_name": "browser/jobs.txt"
+    },
+    {
+      "page": "stages",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1043091/stages/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "S3DefaultJobName - Stages for All Jobs",
+      "file_name": "browser/stages.txt"
+    },
+    {
+      "page": "executors",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1043091/executors/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "S3DefaultJobName - Executors",
+      "file_name": "browser/executors.txt"
+    },
+    {
+      "page": "sql",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1043091/sql/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "S3DefaultJobName - Spark Jobs",
+      "file_name": "browser/sql.txt"
+    }
+  ]
+}

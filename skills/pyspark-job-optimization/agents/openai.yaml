@@ -1,0 +1,4 @@
+interface:
+  display_name: "PySpark Job Optimization"
+  short_description: "Read code and Spark UI to find bottlenecks"
+  default_prompt: "Use $pyspark-job-optimization to inspect PySpark source and Spark UI logs, identify the top bottlenecks, and apply targeted optimizations."

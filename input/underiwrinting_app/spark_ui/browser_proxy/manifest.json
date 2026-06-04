@@ -1,0 +1,35 @@
+{
+  "base_url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1041233/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+  "pages": [
+    {
+      "page": "environment",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1041233/environment/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "ads_udl_customer_underwriting_feature_app_df - Environment",
+      "file_name": "browser_proxy/environment.txt"
+    },
+    {
+      "page": "jobs",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1041233/jobs/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "ads_udl_customer_underwriting_feature_app_df - Spark Jobs",
+      "file_name": "browser_proxy/jobs.txt"
+    },
+    {
+      "page": "stages",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1041233/stages/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "ads_udl_customer_underwriting_feature_app_df - Stages for All Jobs",
+      "file_name": "browser_proxy/stages.txt"
+    },
+    {
+      "page": "executors",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1041233/executors/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "ads_udl_customer_underwriting_feature_app_df - Executors",
+      "file_name": "browser_proxy/executors.txt"
+    },
+    {
+      "page": "sql",
+      "url": "https://keyhole.ph.seabank.io/proxy/application_1772593899018_1041233/sql/?originHost=hadoop-ph-live09-10-163-90-104%3A8088&originIp=hadoop-ph-live09-10-163-90-104&originPort=8088",
+      "title": "ads_udl_customer_underwriting_feature_app_df - Spark Jobs",
+      "file_name": "browser_proxy/sql.txt"
+    }
+  ]
+}

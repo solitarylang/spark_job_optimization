@@ -1,0 +1,113 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+ads_udl_customer_underwriting_fe... application UI
+Stages for All Jobs
+Active Stages: 3
+Pending Stages: 1
+Completed Stages: 2
+ Active Stages (3)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+Stage Id ▾
+Description
+Submitted
+Duration
+Tasks: Succeeded/Total	
+Input
+Output
+Shuffle Read
+Shuffle Write
+5	
+broadcast exchange (runId ca3313b9-a483-4757-9b5b-2cbc9edfd984)
+$anonfun$withThreadLocalCaptured$1 at FutureTask.java:266+details
+2026/06/04 10:30:36	Unknown	
+0/1
+3	
+insertInto at NativeMethodAccessorImpl.java:0+details
+2026/06/04 05:10:01	Unknown	
+0/69999
+1	
+insertInto at NativeMethodAccessorImpl.java:0+details
+2026/06/04 05:10:00	9.3 h	
+61406/69999 (300 failed)
+6.4 TiB			129.2 GiB
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+ Pending Stages (1)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+Stage Id ▾
+Description
+Submitted
+Duration
+Tasks: Succeeded/Total	
+Input
+Output
+Shuffle Read
+Shuffle Write
+4	
+insertInto at NativeMethodAccessorImpl.java:0+details
+Unknown	Unknown	
+0/4
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+ Completed Stages (2)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+Stage Id ▾
+Description
+Submitted
+Duration
+Tasks: Succeeded/Total	
+Input
+Output
+Shuffle Read
+Shuffle Write
+2	
+insertInto at NativeMethodAccessorImpl.java:0+details
+2026/06/04 05:10:00	5 s	
+4/4
+4.9 KiB
+0	
+Listing leaf files and directories for 360 paths:
+hdfs://phlive1/projects/ods/hive/ods/mbs_dispatch_center_message_log_device_security_di/pt_date=2025-06-09, ...
+insertInto at NativeMethodAccessorImpl.java:0+details
+2026/06/04 05:09:26	21 s	
+360/360 (8 killed: another attempt succeeded)(1 killed: Finish but did not commit due to another attempt succeeded)(1 killed: Stage finished)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1

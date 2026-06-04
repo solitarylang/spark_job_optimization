@@ -1,0 +1,76 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+ads_udl_customer_underwriting_fe... application UI
+Spark Jobs (?)
+User: hadoop
+Total Uptime: 9.3 h
+Scheduling Mode: FIFO
+Active Jobs: 3
+Completed Jobs: 2
+ Event Timeline
+ Active Jobs (3)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+Job Id (Job Group) ▾
+Description
+Submitted
+Duration
+Stages: Succeeded/Total	Tasks (for all stages): Succeeded/Total
+4 (ca3313b9-a483-4757-9b5b-2cbc9edfd984)	
+broadcast exchange (runId ca3313b9-a483-4757-9b5b-2cbc9edfd984)
+$anonfun$withThreadLocalCaptured$1 at FutureTask.java:266	2026/06/04 10:30:36	4.0 h	0/2	
+0/5
+3	
+insertInto at NativeMethodAccessorImpl.java:0
+insertInto at NativeMethodAccessorImpl.java:0	2026/06/04 05:10:00	9.3 h	0/1	
+0/69999
+1	
+insertInto at NativeMethodAccessorImpl.java:0
+insertInto at NativeMethodAccessorImpl.java:0	2026/06/04 05:09:58	9.3 h	0/1	
+61395/69999 (300 failed)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+ Completed Jobs (2)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+Job Id ▾
+Description
+Submitted
+Duration
+Stages: Succeeded/Total	Tasks (for all stages): Succeeded/Total
+2	
+insertInto at NativeMethodAccessorImpl.java:0
+insertInto at NativeMethodAccessorImpl.java:0	2026/06/04 05:10:00	5.3 h	1/1	
+4/4
+0	
+Listing leaf files and directories for 360 paths:
+hdfs://phlive1/projects/ods/hive/ods/mbs_dispatch_center_message_log_device_security_di/pt_date=2025-06-09, ...
+insertInto at NativeMethodAccessorImpl.java:0	2026/06/04 05:09:26	22 s	1/1	
+360/360 (8 killed: another attempt succeeded)(1 killed: Finish but did not commit due to another attempt succeeded)(1 killed: Stage finished)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1

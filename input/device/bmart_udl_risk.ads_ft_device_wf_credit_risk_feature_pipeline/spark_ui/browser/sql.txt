@@ -1,0 +1,47 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+S3DefaultJobName application UI
+Executors
+Show Additional Metrics
+ Select All
+ On Heap Memory
+ Off Heap Memory
+ Peak JVM Memory OnHeap / OffHeap
+ Peak Execution Memory OnHeap / OffHeap
+ Peak Storage Memory OnHeap / OffHeap
+ Peak Pool Memory Direct / Mapped
+ Resources
+ Resource Profile Id
+ Exec Loss Reason
+Summary
+RDD Blocks	Storage Memory	Disk Used	Cores	Active Tasks	Failed Tasks	Complete Tasks	Total Tasks	Task Time (GC Time)	Input	Shuffle Read	Shuffle Write	Excluded
+Active(2)	0	274.6 KiB / 18.8 GiB	0.0 B	1	0	0	2185	2185	8.9 min (9 s)	0.0 B	0.0 B	0.0 B	0
+Dead(1)	0	0.0 B / 14.2 GiB	0.0 B	1	0	0	0	0	0.0 ms (0.0 ms)	0.0 B	0.0 B	0.0 B	0
+Total(3)	0	274.6 KiB / 33.1 GiB	0.0 B	2	0	0	2185	2185	8.9 min (9 s)	0.0 B	0.0 B	0.0 B	0
+Executors
+Show 
+20
+ entries
+Search:
+Executor ID	Address	Status	RDD Blocks	Storage Memory	Disk Used	Cores	Active Tasks	Failed Tasks	Complete Tasks	Total Tasks	Task Time (GC Time)	Input	Shuffle Read	Shuffle Write	Logs	Thread Dump
+driver	phdrt-psp-hadoop19-90-131.di.seabanksvc.com:34531	Active	0	137.3 KiB / 4.6 GiB	0.0 B	0	0	0	0	0	0.0 ms (0.0 ms)	0.0 B	0.0 B	0.0 B	
+stdout
+stderr
+Thread Dump
+1	phdrt-psp-hadoop25-90-124.di.seabanksvc.com:36591	Dead	0	0.0 B / 14.2 GiB	0.0 B	1	0	0	0	0	0.0 ms (0.0 ms)	0.0 B	0.0 B	0.0 B	
+stdout
+stderr
+Thread Dump
+2	phdrt-psp-hadoop22-90-171.di.seabanksvc.com:41331	Active	0	137.3 KiB / 14.2 GiB	0.0 B	1	0	0	2185	2185	8.9 min (9 s)	0.0 B	0.0 B	0.0 B	
+stdout
+stderr
+Thread Dump
+Showing 1 to 3 of 3 entries
+Previous
+1
+Next

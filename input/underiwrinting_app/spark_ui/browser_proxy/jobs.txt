@@ -1,0 +1,155 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+ads_udl_customer_underwriting_fe... application UI
+Environment
+ Runtime Information
+Name	Value
+Java Home	/opt/openlogic-openjdk-8u292-b10-linux-x64/jre
+Java Version	1.8.0-292 (OpenLogic-OpenJDK)
+Scala Version	version 2.12.15
+ Spark Properties
+Name	Value
+hive.exec.dynamic.partition.mode	nonstrict
+spark.acls.enable	false
+spark.app.attempt.id	1
+spark.app.id	application_1772593899018_1041233
+spark.app.name	ads_udl_customer_underwriting_feature_app_df
+spark.app.startTime	1780520890517
+spark.aux.jar	hdfs://phlive1/packages/jars/kyuubi-common_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-events_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-spark-lineage_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-util-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-util-scala_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kafka-clients-3.5.1.jar,hdfs://phlive1/packages/jars/sql-parser-0.0.1-SNAPSHOT-jar-with-dependencies.jar,hdfs://phlive1/packages/jars/paimon-hive-connector-2.3-shopee-0.9.7-fix1.jar,hdfs://phlive1/packages/jars/paimon-spark-3.2-shopee-0.9.7.jar
+spark.driver.extraClassPath	
+spark.driver.extraJavaOptions	-Xss2m -XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps
+spark.driver.extraLibraryPath	./__spark_libs__/hadoop-native-so:
+spark.driver.host	phdrt-psp-hadoop25-90-124.di.seabanksvc.com
+spark.driver.maxResultSize	2g
+spark.driver.memory	8G
+spark.driver.port	37407
+spark.dynamicAllocation.enabled	true
+spark.dynamicAllocation.initialExecutors	1
+spark.dynamicAllocation.maxExecutors	100
+spark.dynamicAllocation.minExecutors	1
+spark.eventLog.compress	true
+spark.eventLog.dir	hdfs://phlive1/logs/spark/
+spark.eventLog.enabled	true
+spark.eventLog.logStageExecutorMetrics	true
+spark.excludeOnFailure.enabled	true
+spark.executor.cores	4
+spark.executor.extraClassPath	
+spark.executor.extraJavaOptions	-XX:+UseG1GC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps
+spark.executor.extraLibraryPath	./__spark_libs__/hadoop-native-so:
+spark.executor.id	driver
+spark.executor.instances	18
+spark.executor.memory	24g
+spark.executor.memoryOverhead	2g
+spark.executor.metrics.pollingInterval	1000
+spark.executor.processTreeMetrics.enabled	true
+spark.executorEnv.PYTHONPATH	{{PWD}}/__pyfiles__<CPS>{{PWD}}/pyspark.zip<CPS>{{PWD}}/py4j-0.10.9.3-src.zip
+spark.extraListeners	com.shopee.warehouse.sqlparser.SparkMetricReportListener
+spark.hadoop.dfs.client.datanode-restart.timeout	30
+spark.hadoop.fs.trash.create.root.enable	false
+spark.hadoop.hive.stats.autogather	false
+spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version	2
+spark.hadoop.mapreduce.input.fileinputformat.input.dir.recursive	true
+spark.hadoop.yarn.timeline-service.enabled	false
+spark.hadoopRDD.ignoreEmptySplits	false
+spark.kafka.topic.name	dwh-spark-lineage-live
+spark.kafka.url	corebank-kafka-1.mdw.seabanksvc.com:9102,corebank-kafka-2.mdw.seabanksvc.com:9102,corebank-kafka-3.mdw.seabanksvc.com:9102
+spark.kryoserializer.buffer	512m
+spark.kryoserializer.buffer.max	512m
+spark.kyuubi.plugin.lineage.dispatchers	SHOPEE_BANK_EVENT
+spark.kyuubi.plugin.lineage.skip.parsing.permanent.view.enabled	true
+spark.master	yarn
+spark.metrics.appStatusSource.enabled	true
+spark.metrics.conf.*.sink.prometheusServlet.class	org.apache.spark.metrics.sink.PrometheusServlet
+spark.metrics.conf.*.sink.prometheusServlet.path	/metrics/prometheus
+spark.metrics.conf.*.source.jvm.class	org.apache.spark.metrics.source.JvmSource
+spark.metrics.conf.applications.sink.prometheusServlet.path	/metrics/applications/prometheus
+spark.metrics.conf.master.sink.prometheusServlet.path	/metrics/master/prometheus
+spark.network.maxRemoteBlockSizeFetchToMem	64m
+spark.org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter.param.PROXY_HOSTS	hadoop-ph-live09-10-163-90-104,hadoop-ph-live10-10-163-90-105
+spark.org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter.param.PROXY_URI_BASES	http://hadoop-ph-live09-10-163-90-104:8088/proxy/application_1772593899018_1041233,http://hadoop-ph-live10-10-163-90-105:8088/proxy/application_1772593899018_1041233
+spark.org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter.param.RM_HA_URLS	hadoop-ph-live09-10-163-90-104:8088,hadoop-ph-live10-10-163-90-105:8088
+spark.port.maxRetries	500
+spark.rdd.compress	True
+spark.reducer.maxBlocksInFlightPerAddress	1024
+spark.reducer.maxReqsInFlight	32
+spark.scheduler.mode	FIFO
+spark.serializer	org.apache.spark.serializer.KryoSerializer
+spark.serializer.objectStreamReset	100
+spark.shuffle.io.connectionTimeout	300s
+spark.shuffle.io.maxRetries	6
+spark.shuffle.io.retryWait	10s
+spark.shuffle.registration.timeout	600000
+spark.shuffle.service.enabled	true
+spark.speculation	true
+spark.speculation.min.threshold	10000
+spark.speculation.multiplier	2.0
+spark.speculation.quantile	0.90
+spark.sql.adaptive.enabled	true
+spark.sql.adaptive.localShuffleReader.enabled	true
+spark.sql.broadcastTimeout	36000
+spark.sql.catalogImplementation	hive
+spark.sql.hive.convertMetastoreOrc	true
+spark.sql.hive.manageFilesourcePartitions	true
+spark.sql.hive.metastore.sharedPrefixes	org.apache.phoenix.jdbc.PhoenixDriver
+spark.sql.optimizer.runtime.bloomFilter.enabled	false
+spark.sql.orc.filterPushdown	true
+spark.sql.orc.impl	native
+spark.sql.parser.host	10.163.95.95
+spark.sql.parser.port	9142
+spark.sql.queryExecutionListeners	com.shopee.warehouse.sqlparser.SparkQueryExecutionListener
+spark.sql.shuffle.partitions	200
+spark.sql.statistics.onlyNonPartitionedTable.size.autoUpdate.enabled	true
+spark.sql.statistics.partition.size.autoUpdate.enabled	true
+spark.sql.statistics.size.autoUpdate.enabled	true
+spark.sql.streaming.metricsEnabled	true
+spark.sql.ui.retainedExecutions	100
+spark.sql.warehouse.dir	/user/hive/warehouse
+spark.stage.maxConsecutiveAttempts	10
+spark.submit.deployMode	cluster
+spark.submit.pyFiles	file:///home/hadoop/release/data-warehouse-airflow2/live/live-065e3099a845-20260528-112849872-53375/credit_risk/dwh_credit_risk/task/bmart_creditrisk/ads_udl_customer_underwriting_feature_app_df/high_risk_app.py
+spark.ui.executor.processTreeMetrics.enabled	true
+spark.ui.filters	org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+spark.ui.killEnabled	false
+spark.ui.port	4040
+spark.ui.prometheus.enabled	true
+spark.ui.retainedDeadExecutors	300
+spark.ui.retainedJobs	500
+spark.ui.retainedStages	1000
+spark.ui.retainedTasks	100000
+spark.ui.showConsoleProgress	true
+spark.unsafe.sorter.spill.reader.buffer.size	1m
+spark.yarn.am.clientModeExitOnError	true
+spark.yarn.am.clientModeTreatDisconnectAsFailed	true
+spark.yarn.am.cores	1
+spark.yarn.am.memory	6g
+spark.yarn.app.container.log.dir	/data8/yarn/log/application_1772593899018_1041233/container_e1031_1772593899018_1041233_01_000001
+spark.yarn.app.id	application_1772593899018_1041233
+spark.yarn.archive	hdfs://phlive1/packages/jars/spark-v3.2.1-sdi-097.tar.gz
+spark.yarn.clientLaunchMonitorInterval	3s
+spark.yarn.dist.jars	hdfs://phlive1/packages/jars/kyuubi-common_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-events_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-spark-lineage_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-util-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kyuubi-util-scala_2.12-1.9.0-SNAPSHOT.jar,hdfs://phlive1/packages/jars/kafka-clients-3.5.1.jar,hdfs://phlive1/packages/jars/sql-parser-0.0.1-SNAPSHOT-jar-with-dependencies.jar,hdfs://phlive1/packages/jars/paimon-hive-connector-2.3-shopee-0.9.7-fix1.jar,hdfs://phlive1/packages/jars/paimon-spark-3.2-shopee-0.9.7.jar
+spark.yarn.dist.pyFiles	file:///home/hadoop/release/data-warehouse-airflow2/live/live-065e3099a845-20260528-112849872-53375/credit_risk/dwh_credit_risk/task/bmart_creditrisk/ads_udl_customer_underwriting_feature_app_df/high_risk_app.py
+spark.yarn.historyServer.address	http://10.163.90.104:18088
+spark.yarn.isPython	true
+spark.yarn.maxAppAttempts	2
+spark.yarn.populateHadoopClasspath	false
+spark.yarn.queue	warehouse_risk
+spark.yarn.report.interval	3s
+spark.yarn.secondary.jars	kyuubi-common_2.12-1.9.0-SNAPSHOT.jar,kyuubi-events_2.12-1.9.0-SNAPSHOT.jar,kyuubi-spark-lineage_2.12-1.9.0-SNAPSHOT.jar,kyuubi-util-1.9.0-SNAPSHOT.jar,kyuubi-util-scala_2.12-1.9.0-SNAPSHOT.jar,kafka-clients-3.5.1.jar,sql-parser-0.0.1-SNAPSHOT-jar-with-dependencies.jar,paimon-hive-connector-2.3-shopee-0.9.7-fix1.jar,paimon-spark-3.2-shopee-0.9.7.jar
+ Resource Profiles
+Resource Profile Id	Resource Profile Contents
+0	
+Executor Reqs:
+	memoryOverhead: [amount: 2048]
+	cores: [amount: 4]
+	memory: [amount: 24576]
+	offHeap: [amount: 0]
+Task Reqs:
+	cpus: [amount: 1.0]
+ Hadoop Properties
+ System Properties
+ Classpath Entries

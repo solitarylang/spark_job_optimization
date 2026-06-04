@@ -1,0 +1,53 @@
+
+Logged in as: work
+Application application_1772593899018_1041233
+Cluster
+About
+Nodes
+Node Labels
+Applications
+NEW
+NEW_SAVING
+SUBMITTED
+ACCEPTED
+RUNNING
+FINISHED
+FAILED
+KILLED
+Scheduler
+Tools
+
+Application Overview
+User:	hadoop
+Name:	high_risk_app.py
+Application Type:	SPARK
+Application Tags:	
+Application Priority:	5 (Higher Integer value indicates higher priority)
+YarnApplicationState:	RUNNING: AM has registered with RM and started running.
+Queue:	warehouse_risk
+FinalStatus Reported by AM:	Application has not completed yet.
+Started:	Thu Jun 04 05:07:56 +0800 2026
+Launched:	Thu Jun 04 05:07:59 +0800 2026
+Finished:	N/A
+Elapsed:	9hrs, 19mins, 31sec
+Tracking URL:	ApplicationMaster
+Log Aggregation Status:	NOT_START
+Application Timeout (Remaining Time):	Unlimited
+Diagnostics:	
+Unmanaged Application:	false
+Application Node Label expression:	<Not set>
+AM container Node Label expression:	<DEFAULT_PARTITION>
+Application Metrics
+Total Resource Preempted:	<memory:2023424, vCores:76>
+Total Number of Non-AM Containers Preempted:	76
+Total Number of AM Containers Preempted:	0
+Resource Preempted from Current Attempt:	<memory:2023424, vCores:76>
+Number of Non-AM Containers Preempted from Current Attempt:	76
+Aggregate Resource Allocation:	5803484590 MB-seconds, 239885 vcore-seconds
+Aggregate Preempted Resource Allocation:	2131162823 MB-seconds, 80008 vcore-seconds
+Show 
+20
+ entriesSearch:
+Attempt ID	Started	Node	Logs	Nodes blacklisted by the app	Nodes blacklisted by the system
+appattempt_1772593899018_1041233_000001	Thu Jun 4 05:07:56 +0800 2026	http://phdrt-psp-hadoop25-90-124.di.seabanksvc.com:8042	Logs	0	0
+Showing 1 to 1 of 1 entriesFirstPrevious1NextLast
