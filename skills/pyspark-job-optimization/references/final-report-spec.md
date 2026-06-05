@@ -36,7 +36,7 @@
 ### 第 2 章：运行日志分析（优化前）
 
 - 集群与环境信息
-- Jobs / Stages / Executors / SQL / EventLog / AM / Driver 证据
+- Jobs / Stages / Executors / SQL / EventLog / AM / Driver 证据；如果能直接定位到 SQL，要同时保留 SQL 原文、执行计划和对应 stage
 - 关键 stage 的耗时、任务数、shuffle、失败、spill
 - 运行链路表或流程图，用于串起整体执行过程
 - `已确认` / `待确认`
