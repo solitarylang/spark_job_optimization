@@ -28,6 +28,21 @@
 - `sql` 页面：SQL 执行计划、join 类型、exchange、window、stage 对应关系
 - `eventlog`：可补充 stage / job / task 的原始执行证据
 
+## 可额外采集的信息
+
+如果只看 Spark UI 还不能解释“为什么慢”或“为什么失败”，再补下面这些原始信息：
+
+- `ApplicationMaster` 日志：AM 是否启动成功、是否被杀、是否拿不到资源、是否有提交失败或重试
+- `driver` 日志：Python / JVM 异常栈、DataFrame 写入失败、task 组装失败、最终抛错位置
+- `executor` 日志：`OutOfMemoryError`、`GC overhead`、`Container killed`、`FetchFailed`、`FileNotFound`、`DiskError`
+- `YARN diagnostics`：`preempted`、`killed by user`、`exit code`、`lost container`、`node lost`
+- `stage / task failure reason`：失败任务是否集中在某个 stage、某个 partition、某台机器
+- `executor loss reason`：executor 是 OOM、抢占、节点失联，还是本地磁盘异常
+- `blacklist` / `exclude` 结果：是否有节点或 executor 被反复拉黑，导致可用资源变少
+- `GC / spill / memory` 相关指标：是否存在频繁 Full GC、spill 过大、内存抖动
+- `shuffle / fetch` 相关日志：shuffle 文件丢失、shuffle fetch 失败、metadata 不一致
+- `提交命令`：`spark-submit` / Airflow / DAG 的实际参数，确认是否和 UI 一致
+
 ## 输出
 
 - job / stage / executor / environment / SQL 的运行备注

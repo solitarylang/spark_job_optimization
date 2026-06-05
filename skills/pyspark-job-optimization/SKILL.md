@@ -24,14 +24,14 @@ description: 用于通过源码和 Spark UI 日志分析 PySpark 任务，定位
 0. 采集集群资源和上游表上下文。
    使用 `scripts/collect_case_context.py` 和 `references/context-collection.md`。
    如果 Spark UI 只能通过登录态浏览器访问，先用 `scripts/collect_spark_ui_browser.py` 采集页面文本，再跑 `collect_case_context.py`。
-1. 读取 PySpark 源码。
-   见 `references/step-1-source-reading.md`。
-2. 读取 YARN application / Spark 运行日志。
-   见 `references/step-2-spark-ui-reading.md` 和 `references/input-contract.md`。
-3. 结合代码路径和运行证据定位慢点。
+1. 调用源码分析子 skill，形成最终报告第 1 章素材。
+   见 `subskills/source-reading/SKILL.md` 和 `references/step-1-source-reading.md`。
+2. 调用 Spark UI / 日志分析子 skill，形成最终报告第 2 章素材。
+   见 `subskills/spark-ui-reading/SKILL.md`、`references/step-2-spark-ui-reading.md` 和 `references/input-contract.md`。
+3. 结合代码路径和运行证据定位慢点，形成最终报告第 3 章素材。
    见 `references/step-3-root-cause-ranking.md` 和 `references/diagnostic-heuristics.md`。
-4. 按影响度排序前 5 个有证据支撑的瓶颈，只给直接支持的优化建议，并等待用户确认哪些可以改。
-   见 `references/step-4-optimization-proposal.md` 和 `references/final-report-spec.md`。
+4. 按影响度排序前 5 个有证据支撑的瓶颈，只给直接支持的优化建议，并等待用户确认哪些可以改，形成最终报告第 4 章。
+   见 `references/step-4-optimization-proposal.md`、`references/final-report-spec.md` 和 `references/final-report-template.md`。
    第 4 步报告文字版和图片都要尽量贴近 `references/step-4-report-template.md` 与 `references/assets/step4-report-sample.svg`。
 5. 执行已确认的代码变更。
    见 `references/step-5-code-change.md`。
@@ -46,6 +46,8 @@ description: 用于通过源码和 Spark UI 日志分析 PySpark 任务，定位
 - Executor 丢失、抢占、重试、Killed attempt 先当作症状，除非执行日志直接证明它是根因。
 - 优先给能先去掉主瓶颈的最小改动，但没有直接证据前不要把改动写成已验证。
 - 排序优化思路时，顺序固定为：先调 Spark 参数，再改实现方式，最后才考虑改业务逻辑。
+- 源码分析必须按 Spark stage 拆分，形成 `源码 -> stage -> 指标` 对照；看到任何算子都要能回指到对应 stage 的运行信息。
+- 最终报告必须按四章输出：源码分析、运行日志分析、根因分析、优化方案；每一章只写自己那一步必须产出的内容。
 - 分析源码时，额外关注任何会把一条记录展开成多条记录的操作，尤其是 `explode`、`explode_outer`、`flatMap`、`posexplode`、数组展开和展开后再聚合 / join 的链路。
 - 分析源码时，额外关注中间列的下游活跃性；像 `select`、`withColumn`、`alias`、`rank`、`row_number` 这类中间结果，如果后面没进入 `filter`、`join`、`groupBy`、`agg` 或 `write`，要当作冗余列处理。
 - 除了最终写入或者明确的验证动作，尽量不要在中间链路频繁使用 `show()`、`collect()`、`take()`、`toPandas()` 这类 action。

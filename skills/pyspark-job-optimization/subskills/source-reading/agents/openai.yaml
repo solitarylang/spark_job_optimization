@@ -1,0 +1,4 @@
+interface:
+  display_name: "PySpark Source Reading"
+  short_description: "Analyze PySpark source code by stage and produce chapter-1 materials."
+  default_prompt: "Use this subskill to analyze PySpark source code, split it by Spark stage, and produce the source-reading chapter inputs."

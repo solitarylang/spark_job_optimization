@@ -1,0 +1,4 @@
+interface:
+  display_name: "PySpark Spark UI Reading"
+  short_description: "Collect and summarize Spark UI, YARN, and runtime log evidence."
+  default_prompt: "Use this subskill to collect Spark UI, YARN, AM, driver, executor, and eventlog evidence for a PySpark job."

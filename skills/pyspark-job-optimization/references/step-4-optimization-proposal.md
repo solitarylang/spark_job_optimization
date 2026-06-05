@@ -38,8 +38,8 @@
 - 可直接应用的条目
 - 按预期影响度排序，其次按风险排序
 - 包含一个简短 `总结` 小节，说明这个任务在做什么、核心逻辑是什么
-- 第 4 步 report 的文字版必须贴近 `references/step-4-report-template.md`
-- 第 4 步图片的版式必须参考 `references/assets/step4-report-sample.svg` 和 `references/assets/step4-report-sample.png`
+- 这一节将作为最终报告的第 4 章，因此正文必须贴近 `references/step-4-report-template.md`
+- 第 4 章图片的版式必须参考 `references/assets/step4-report-sample.svg` 和 `references/assets/step4-report-sample.png`
 - 当 scan 量过大时，可以把“构建中间表 / 中间快照”作为一类标准化建议
 - 当 join 链路过长或重复 join 很多时，可以把“按天构建中间表”作为一类标准化建议
 - 当输入 scan 进来的字段或分区最后没有用到时，要把“末端裁字段 / 裁分区”作为一类标准化建议，避免前面读得多、最后用得少
