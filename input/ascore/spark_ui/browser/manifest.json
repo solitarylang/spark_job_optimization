@@ -1,0 +1,35 @@
+{
+  "base_url": "https://keyhole.ph.seabank.io/history/application_1772593899018_1055219/1/?originSchema=http&originHost=10.163.90.104%3A18088",
+  "pages": [
+    {
+      "page": "environment",
+      "url": "https://keyhole.ph.seabank.io/history/application_1772593899018_1055219/1/environment/?originSchema=http&originHost=10.163.90.104%3A18088",
+      "title": "zx_prod_loanstatus - Environment",
+      "file_name": "browser/environment.txt"
+    },
+    {
+      "page": "jobs",
+      "url": "https://keyhole.ph.seabank.io/history/application_1772593899018_1055219/1/jobs/?originSchema=http&originHost=10.163.90.104%3A18088",
+      "title": "zx_prod_loanstatus - Spark Jobs",
+      "file_name": "browser/jobs.txt"
+    },
+    {
+      "page": "stages",
+      "url": "https://keyhole.ph.seabank.io/history/application_1772593899018_1055219/1/stages/?originSchema=http&originHost=10.163.90.104%3A18088",
+      "title": "zx_prod_loanstatus - Stages for All Jobs",
+      "file_name": "browser/stages.txt"
+    },
+    {
+      "page": "executors",
+      "url": "https://keyhole.ph.seabank.io/history/application_1772593899018_1055219/1/executors/?originSchema=http&originHost=10.163.90.104%3A18088",
+      "title": "zx_prod_loanstatus - Executors",
+      "file_name": "browser/executors.txt"
+    },
+    {
+      "page": "sql",
+      "url": "https://keyhole.ph.seabank.io/history/application_1772593899018_1055219/1/jobs/?originSchema=http&originHost=10.163.90.104%3A18088",
+      "title": "zx_prod_loanstatus - Spark Jobs",
+      "file_name": "browser/sql.txt"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+zx_prod_loanstatus application UI
+Executors
+Show Additional Metrics
+ Select All
+ On Heap Memory
+ Off Heap Memory
+ Peak JVM Memory OnHeap / OffHeap
+ Peak Execution Memory OnHeap / OffHeap
+ Peak Storage Memory OnHeap / OffHeap
+ Peak Pool Memory Direct / Mapped
+ Resources
+ Resource Profile Id
+ Exec Loss Reason
+Summary
+RDD Blocks	Storage Memory	Disk Used	Cores	Active Tasks	Failed Tasks	Complete Tasks	Total Tasks	Task Time (GC Time)	Input	Shuffle Read	Shuffle Write	Excluded
+Active(10)	0	0.0 B / 82 GiB	0.0 B	36	0	0	12623	12623	111.9 h (16 min)	401.1 GiB	2.2 TiB	592.2 GiB	0
+Dead(64)	0	0.0 B / 552.9 GiB	0.0 B	256	5	251	41504	41760	164.3 h (45 min)	1.3 TiB	2.8 TiB	1.8 TiB	0
+Total(74)	0	0.0 B / 634.9 GiB	0.0 B	292	5	251	54127	54383	276.2 h (1.0 h)	1.7 TiB	5 TiB	2.4 TiB	0
+Executors
+Show 
+20
+ entries
+Search:
+Executor ID	Address	Status	RDD Blocks	Storage Memory	Disk Used	Cores	Active Tasks	Failed Tasks	Complete Tasks	Total Tasks	Task Time (GC Time)	Input	Shuffle Read	Shuffle Write	Logs
+driver	phdrt-psp-hadoop06-90-101.di.seabanksvc.com:37883	Active	0	0.0 B / 4.2 GiB	0.0 B	0	0	0	0	0	0.0 ms (0.0 ms)	0.0 B	0.0 B	0.0 B	
+stdout
+stderr
+1	phdrt-psp-hadoop07-90-102.di.seabanksvc.com:34023	Active	0	0.0 B / 8.6 GiB	0.0 B	4	0	0	1856	1856	16.3 h (2.9 min)	60.5 GiB	281.3 GiB	87.9 GiB	
+stdout
+stderr
+2	phdrt-psp-hadoop17-90-122.di.seabanksvc.com:38817	Active	0	0.0 B / 8.6 GiB	0.0 B	4	0	0	2303	2303	15.8 h (2.4 min)	76.1 GiB	384 GiB	111.5 GiB	
+stdout
+stderr
+3	phdrt-psp-hadoop23-90-172.di.seabanksvc.com:33547	Active	0	0.0 B / 8.6 GiB	0.0 B	4	0	0	1984	1984	15.8 h (2.3 min)	64.4 GiB	263.5 GiB	95.2 GiB	
+stdout
+stderr
+4	phdrt-psp-hadoop04-90-99.di.seabanksvc.com:34811	Active	0	0.0 B / 8.6 GiB	0.0 B	4	0	0	2112	2112	15.3 h (2.4 min)	70.2 GiB	332.4 GiB	104.6 GiB	
+stdout
+stderr
+5	phdrt-psp-hadoop01-90-96.di.seabanksvc.com:24603	Active	0	0.0 B / 8.6 GiB	0.0 B	4	0	0	1866	1866	15.5 h (2.6 min)	65 GiB	303.5 GiB	95.6 GiB	
+stdout
+stderr
+6	phdrt-psp-hadoop23-90-172.di.seabanksvc.com:36117	Active	0	0.0 B / 8.6 GiB	0.0 B	4	0	0	2026	2026	15.3 h (2.1 min)	64.8 GiB	277.4 GiB	95.5 GiB	
+stdout
+stderr
+7	phdrt-psp-hadoop23-90-172.di.seabanksvc.com:42551	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1982	1986	9.2 h (2.0 min)	69.3 GiB	160.1 GiB	102.5 GiB	
+stdout
+stderr
+8	phdrt-psp-hadoop05-90-100.di.seabanksvc.com:36961	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1857	1861	9.3 h (2.0 min)	70.4 GiB	174.6 GiB	105.4 GiB	
+stdout
+stderr
+9	phdrt-psp-hadoop13-90-111.di.seabanksvc.com:45499	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	2196	2200	9.2 h (2.6 min)	80.8 GiB	174.7 GiB	120.3 GiB	
+stdout
+stderr
+10	phdrt-psp-hadoop06-90-101.di.seabanksvc.com:33271	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1552	1556	3.6 h (1.3 min)	47.7 GiB	35.6 GiB	62.9 GiB	
+stdout
+stderr
+11	phdrt-psp-hadoop24-90-125.di.seabanksvc.com:35965	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1440	1444	3.5 h (2.1 min)	46.2 GiB	35.2 GiB	60.6 GiB	
+stdout
+stderr
+12	phdrt-psp-hadoop18-90-123.di.seabanksvc.com:42567	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1516	1520	3.8 h (1.6 min)	47.9 GiB	70.6 GiB	63.1 GiB	
+stdout
+stderr
+13	phdrt-psp-hadoop19-90-131.di.seabanksvc.com:38773	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1494	1498	3.8 h (1.7 min)	44.4 GiB	70.8 GiB	56.8 GiB	
+stdout
+stderr
+14	phdrt-psp-hadoop21-90-170.di.seabanksvc.com:42215	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1575	1579	3.7 h (1.2 min)	46.8 GiB	70.8 GiB	60.9 GiB	
+stdout
+stderr
+15	phdrt-psp-hadoop18-90-123.di.seabanksvc.com:43257	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1476	1480	3.6 h (1.5 min)	42.6 GiB	70.9 GiB	53 GiB	
+stdout
+stderr
+16	phdrt-psp-hadoop06-90-101.di.seabanksvc.com:27501	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1511	1515	3.5 h (1.1 min)	39.7 GiB	61.8 GiB	48.5 GiB	
+stdout
+stderr
+17	phdrt-psp-hadoop18-90-123.di.seabanksvc.com:43483	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1420	1424	3.5 h (1.4 min)	40.8 GiB	71 GiB	50.3 GiB	
+stdout
+stderr
+18	phdrt-psp-hadoop15-90-113.di.seabanksvc.com:35975	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1386	1390	3.2 h (1.2 min)	38.8 GiB	35.6 GiB	47 GiB	
+stdout
+stderr
+19	phdrt-psp-hadoop21-90-170.di.seabanksvc.com:46031	Dead	0	0.0 B / 8.6 GiB	0.0 B	4	0	4	1526	1530	3.1 h (1.2 min)	42 GiB	35.4 GiB	51.3 GiB	
+stdout
+stderr
+Showing 1 to 20 of 74 entries
+Previous
+1
+2
+3
+4
+Next

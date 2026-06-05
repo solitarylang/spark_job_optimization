@@ -1,0 +1,208 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+zx_prod_loanstatus application UI
+Spark Jobs (?)
+User: hadoop
+Total Uptime: 4.5 h
+Scheduling Mode: FIFO
+Completed Jobs: 43
+ Event Timeline
+ Completed Jobs (43)
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1
+Job Id (Job Group) ▾
+Description
+Submitted
+Duration
+Stages: Succeeded/Total	Tasks (for all stages): Succeeded/Total
+42	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 13:51:11	53 min	1/1 (18 skipped)	
+200/200 (38215 skipped)
+41	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 13:49:59	1.2 min	1/1 (2 skipped)	
+100/100 (11451 skipped)
+40	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 13:30:19	2.5 min	1/1 (6 skipped)	
+40/40 (2746 skipped)
+39	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 13:30:18	2.6 min	1/7	
+40/2786
+38	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 12:20:58	1.2 h	1/2 (1 skipped)	
+200/11451 (200 skipped)
+37	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 12:10:42	1.4 h	1/1 (2 skipped)	
+200/200 (11451 skipped)
+36	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 11:35:36	1.9 h	1/1 (5 skipped)	
+100/100 (2646 skipped)
+35	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 11:34:09	2.3 h	1/1 (1 skipped)	
+200/200 (80 failed) (11251 skipped)
+34	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 11:09:54	1.2 h	1/1 (1 skipped)	
+200/200 (15 failed) (11251 skipped)
+33	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 11:09:54	1.0 h	1/1 (1 skipped)	
+200/200 (9 failed) (11251 skipped)
+32	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:51:42	43 min	1/1 (1 skipped)	
+200/200 (1446 skipped)
+31	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:55	45 min	1/1 (2 skipped)	
+200/200 (4 failed) (800 skipped)
+30	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:44	44 min	1/1	
+536/536
+29	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:36	44 min	1/1	
+11251/11251 (116 failed)
+28	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:35	19 min	1/1	
+11251/11251 (32 failed)
+27	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:35	6.2 min	1/1	
+11251/11251
+26	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:35	1.1 min	1/1	
+1446/1446
+25	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:35	20 s	1/1	
+400/400
+24 (bf79d410-3be9-4993-8d8c-396864a59f8f)	
+broadcast exchange (runId bf79d410-3be9-4993-8d8c-396864a59f8f)
+$anonfun$withThreadLocalCaptured$1 at FutureTask.java:266	2026/06/05 10:50:35	9 s	1/1	
+1/1
+23	
+saveAsTable at NativeMethodAccessorImpl.java:0
+saveAsTable at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:35	13 s	1/1	
+400/400
+22	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:50:19	2 s	1/1 (10 skipped)	
+1/1 (14899 skipped)
+21	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:31:35	19 min	1/1 (9 skipped)	
+200/200 (14699 skipped)
+20	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:31:32	1 s	1/1 (6 skipped)	
+66/66 (2846 skipped)
+19	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:31:27	5 s	1/1 (5 skipped)	
+200/200 (2646 skipped)
+18	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:26:21	5.1 min	1/1 (1 skipped)	
+200/200 (1446 skipped)
+17	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:50	5.3 min	1/1 (2 skipped)	
+200/200 (800 skipped)
+16	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:38	5.4 min	1/1	
+536/536
+15	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:37	5.2 min	1/1	
+11251/11251
+14	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:37	44 s	1/1	
+1446/1446
+13	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:37	13 s	1/1	
+400/400
+12	
+count at NativeMethodAccessorImpl.java:0
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:36	7 s	1/1	
+400/400
+11 (b092c66e-1b75-446a-8db3-6284eafc90a4)	
+broadcast exchange (runId b092c66e-1b75-446a-8db3-6284eafc90a4)
+$anonfun$withThreadLocalCaptured$1 at FutureTask.java:266	2026/06/05 10:25:36	0.9 s	1/1	
+1/1
+10	
+Listing leaf files and directories for 131 paths:
+hdfs://phlive1/user/hive/warehouse/bmart_udl_risk.db/channel_loan_credit_risk_tmp/pt_date=2026-01-21, ...
+count at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:26	1 s	1/1	
+131/131
+9	
+first at ReadWrite.scala:587
+first at ReadWrite.scala:587	2026/06/05 10:25:23	0.6 s	1/1	
+1/1
+8	
+head at GeneralizedLinearRegression.scala:1160
+head at GeneralizedLinearRegression.scala:1160	2026/06/05 10:25:20	2 s	1/1	
+1/1
+7	
+parquet at GeneralizedLinearRegression.scala:1159
+parquet at GeneralizedLinearRegression.scala:1159	2026/06/05 10:25:19	1 s	1/1	
+1/1
+6	
+first at ReadWrite.scala:587
+first at ReadWrite.scala:587	2026/06/05 10:25:17	0.8 s	1/1	
+1/1
+5	
+collect at /data3/yarn/nm-local-dir/usercache/hadoop/appcache/application_1772593899018_1055219/container_e1031_1772593899018_1055219_01_000001/CREDIT_RISK_v2_ascore_pkgs.zip/util_helper/woe_helper_hdfs.py:32
+collect at /data3/yarn/nm-local-dir/usercache/hadoop/appcache/application_1772593899018_1055219/container_e1031_1772593899018_1055219_01_000001/CREDIT_RISK_v2_ascore_pkgs.zip/util_helper/woe_helper_hdfs.py:32	2026/06/05 10:25:14	0.7 s	1/1	
+1/1
+4	
+pivot at NativeMethodAccessorImpl.java:0
+pivot at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:11	0.6 s	1/1 (2 skipped)	
+1/1 (537 skipped)
+3	
+pivot at NativeMethodAccessorImpl.java:0
+pivot at NativeMethodAccessorImpl.java:0	2026/06/05 10:25:10	1 s	1/1 (1 skipped)	
+1/1 (536 skipped)
+2	
+pivot at NativeMethodAccessorImpl.java:0
+pivot at NativeMethodAccessorImpl.java:0	2026/06/05 10:15:42	9.5 min	1/1	
+536/536
+1 (9ea35155-4f75-460e-bd78-a93b79e51e99)	
+broadcast exchange (runId 9ea35155-4f75-460e-bd78-a93b79e51e99)
+$anonfun$withThreadLocalCaptured$1 at FutureTask.java:266	2026/06/05 10:15:39	2 s	1/1	
+1/1
+0	
+Listing leaf files and directories for 135 paths:
+hdfs://phlive1/projects/fmart_loan/hive/fmart_loan/dwd_loan_application_dc/dc_end_date=2026-01-22, ...
+pivot at NativeMethodAccessorImpl.java:0	2026/06/05 10:15:17	20 s	1/1	
+135/135
+1 Pages. Jump to
+1
+. Show
+100
+items in a page.
+Page:
+1

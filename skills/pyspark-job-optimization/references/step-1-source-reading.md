@@ -1,59 +1,47 @@
-# 第 1 步：源码阅读
+# 第 1 步：源码阅读子 skill 调用契约
 
 ## 目的
 
-阅读 PySpark 源码，建立后续诊断需要的代码侧上下文。
+这一节不重复实现源码分析逻辑，只定义如何调用 `subskills/source-reading/SKILL.md`，以及子 skill 交付到最终报告第 1 章的内容边界。
+
+## 由子 skill 完成的工作
+
+- 读取 PySpark 源码
+- 按 Spark stage 拆分源码链路
+- 建立 `源码 -> stage -> 指标` 对照
+- 标出 scan 放大、shuffle 放大、增行、冗余列传递、重复聚合、重复 join、skew、长尾、`count()` / `show()` / `collect()` 等风险点
+- 如果同一条业务链在不同日期执行时会重新解析同一批历史数据，要标成重复执行风险点，并说明是否应该改成增量化、按天中间表或结果复用
+- 如果某个 stage 对应的读取规模超过 10 亿行或 2T，要明确标成“量级合理性待确认”并补充原因判断，重点检查是否存在重复扫描、字段/分区未裁剪、粒度过粗或需要中间表
+- 如果发现冗余中间列，尤其是排序字段、`rank` / `row_number` / `dense_rank` 这类下游没有消费的列，要标成“应删除其计算逻辑”的优化候选，而不是只写末端 drop
+- 如果 scan 的是 130 天、360 天这类长历史分区全量表，要明确写出是否可以改成中间表、增量计算或解析结果复用，避免大数据量重复 scan
+- 标出上游出现、下游未使用、最终也未写入结果表的冗余字段候选
+- 标出每个 stage 的 `已确认` / `待确认`
 
 ## 输入
 
-- `input/<case_name>/source.zip` or `input/<case_name>/source/`
-- PySpark job entrypoint
-- Main transformation logic
-- Helper modules or utilities
+- `input/<case_name>/source.zip` 或 `input/<case_name>/source/`
+- 主入口文件、核心 transformation、helper module
+- `input/<case_name>/context/` 里的上下游表和集群上下文（如有）
+- `subskills/source-reading/SKILL.md`
 
-## 需要捕捉的内容
+## 子 skill 输出
 
-- Execution entry and exit points
-- Main data flow
-- Wide transformations and action points
-- Repeated reads, joins, shuffles, and UDF usage
-- Same input being built more than once
-- Extra `withColumn` chains that only reshape intermediate data
-- Places where data is widened before it is filtered or reduced
-- Join key 的完整诊断：
-  - 是否有 `null`
-  - 是否类型一致
-  - 是否高倾斜
-  - 是否可能发生 many-to-many join
-  - join 前是否能去重或预聚合
-  - join 后是否会异常放大行数
-  - broadcast 表是否真的足够小
-  - broadcast 后是否仍然因为主表 skew 变慢
-- Any one-to-many expansion points, especially `explode` / `explode_outer` / `flatMap` / `posexplode`, and whether they are followed by `groupBy` / `join` / `distinct`
-- 中间链路里的 `show()`、`collect()`、`take()`、`toPandas()`、`count()` 之类 action 点；除非是最终写入或明确验证，否则要标记为不建议频繁使用
-- 输入 scan 进来的字段和分区是否在末端真的被使用；如果最后没用到，要标记出多余字段和多余分区
-- 中间生成的列是否真的被下游消费；尤其是 `select` / `withColumn` / `alias` / `rank` / `row_number` 这类字段，后面如果没有进入 `filter`、`join`、`groupBy`、`agg`、`write`，要标记成冗余中间列
+子 skill 的输出必须能直接写入最终报告第 1 章，至少包括：
 
-## 输出
-
-- 按 Spark stage 切分的源码分析结果
+- 按 Spark stage 划分的源码分析结果
 - `源码 -> stage -> 指标` 对照表
 - 每个 stage 对应的代码范围、算子链路和数据流说明
-- 每个 stage 的潜在风险点：
-  - scan 放大
-  - shuffle 放大
-  - 增行 / 数据膨胀
-  - 数据分布不均 / skew
-  - 冗余列传递
-  - 重复聚合 / 重复 join
-- 每个 stage 是否存在 `count()` / `show()` / `collect()` 这类 action 触发的全量执行点
-- 每个 stage 是否存在长尾风险、极端大分区或热点 key 的迹象
-- 每个 stage 的 `已确认` / `待确认` 标记
+- 每个 stage 的风险点和观察项
+- 每个 stage 下游未消费、最终未写入结果表的冗余字段候选
+- 每个 stage 的 `已确认` / `待确认`
 - 需要在第 2 步补齐的证据缺口
 
-## 强制规则
+## 本节不做的事
 
-- 源码分析必须按 Spark 任务实际 stage 拆分，而不是只按文件或函数拆分。
-- 每个 stage 都要能对应到一段明确的源码算子链路。
-- 看到一个算子时，必须能回指到它所在的 stage、该 stage 的运行时长、任务数、输入输出和 shuffle 指标。
-- 如果某段源码还不能映射到具体 stage，就先标成 `待确认`，不要放进已确认主链路。
+- 不在这里重新展开完整分析规则
+- 不在这里直接下结论替代子 skill
+- 不在这里提前写 Spark UI 的运行证据
+
+## 调用要求
+
+调用时只需要把 case 输入和子 skill 一起传入，让子 skill 负责实际分析；本节只负责把分析结果收口成第 1 章素材。

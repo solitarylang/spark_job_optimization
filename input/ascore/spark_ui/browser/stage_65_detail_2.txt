@@ -1,0 +1,122 @@
+ 3.2.1-sdi-097
+Jobs
+Stages
+Storage
+Environment
+Executors
+SQL
+zx_prod_loanstatus application UI
+Details for Stage 65 (Attempt 0)
+Resource Profile Id: 0
+Total Time Across All Tasks: 33.0 h
+Locality Level Summary: Node local: 9561; Rack local: 1806
+Input Size / Records: 739.2 GiB / 28168250437
+Shuffle Write Size / Records: 1314.0 GiB / 27690427054
+Associated Job Ids: 29 
+ DAG Visualization
+ Show Additional Metrics
+ Event Timeline
+Summary Metrics for 11251 Completed Tasks
+Metric	Min	25th percentile	Median	75th percentile	Max
+Duration	0.8 s	9 s	10 s	12 s	42 s
+GC Time	0.0 ms	49.0 ms	66.0 ms	93.0 ms	1 s
+Input Size / Records	192 KiB / 0	59.3 MiB / 2207566	63.5 MiB / 2363634	87.6 MiB / 3256320	88.9 MiB / 3312640
+Shuffle Write Size / Records	0.0 B / 0	105.4 MiB / 2169984	112.9 MiB / 2323635	155.9 MiB / 3203986	158.2 MiB / 3257470
+Showing 1 to 4 of 4 entries
+ Aggregated Metrics by Executor
+Tasks (11367)
+Show 
+20
+ entries
+Search:
+Index	Task ID	Attempt	Status	Locality level	Executor ID	Host	Logs	Launch Time	Duration	GC Time	Input Size / Records	Shuffle Write Size / Records	Errors
+0	40564	0	SUCCESS	NODE_LOCAL	21	phdrt-psp-hadoop14-90-112.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:45	13 s	0.3 s	88.6 MiB / 3297280	157.3 MiB / 3240780	
+1	40541	0	SUCCESS	NODE_LOCAL	4	phdrt-psp-hadoop04-90-99.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:43	16 s	71.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240219	
+2	38212	0	SUCCESS	NODE_LOCAL	12	phdrt-psp-hadoop18-90-123.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:06:53	15 s	0.4 s	88.6 MiB / 3297280	157.3 MiB / 3241087	
+3	40594	0	SUCCESS	NODE_LOCAL	13	phdrt-psp-hadoop19-90-131.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:47	23 s	0.5 s	88.6 MiB / 3297280	157.3 MiB / 3240629	
+4	40550	0	SUCCESS	NODE_LOCAL	2	phdrt-psp-hadoop17-90-122.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:44	16 s	84.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240970	
+5	38221	0	SUCCESS	NODE_LOCAL	17	phdrt-psp-hadoop18-90-123.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:06:54	13 s	74.0 ms	88.6 MiB / 3297280	157.3 MiB / 3241018	
+6	40551	0	SUCCESS	NODE_LOCAL	23	phdrt-psp-hadoop22-90-171.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:44	17 s	0.2 s	88.6 MiB / 3297280	157.3 MiB / 3240407	
+7	40540	0	SUCCESS	NODE_LOCAL	11	phdrt-psp-hadoop24-90-125.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:43	15 s	0.2 s	88.6 MiB / 3297280	157.3 MiB / 3240972	
+8	40554	0	SUCCESS	NODE_LOCAL	14	phdrt-psp-hadoop21-90-170.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:44	15 s	0.2 s	88.6 MiB / 3297280	157.3 MiB / 3240872	
+9	40539	0	SUCCESS	NODE_LOCAL	22	phdrt-psp-hadoop25-90-124.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:43	16 s	0.2 s	88.6 MiB / 3297280	157.3 MiB / 3240908	
+10	38222	0	SUCCESS	NODE_LOCAL	17	phdrt-psp-hadoop18-90-123.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:06:54	17 s	74.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240955	
+11	40544	0	SUCCESS	NODE_LOCAL	11	phdrt-psp-hadoop24-90-125.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:43	13 s	73.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240608	
+12	38412	0	SUCCESS	NODE_LOCAL	7	phdrt-psp-hadoop23-90-172.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:07:08	13 s	0.3 s	88.6 MiB / 3297280	157.3 MiB / 3240584	
+13	40547	0	SUCCESS	NODE_LOCAL	10	phdrt-psp-hadoop06-90-101.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:44	14 s	83.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240433	
+14	40545	0	SUCCESS	NODE_LOCAL	22	phdrt-psp-hadoop25-90-124.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:43	14 s	0.2 s	88.6 MiB / 3297280	157.3 MiB / 3240702	
+15	40555	0	SUCCESS	NODE_LOCAL	2	phdrt-psp-hadoop17-90-122.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:44	13 s	84.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240836	
+16	40562	0	SUCCESS	NODE_LOCAL	22	phdrt-psp-hadoop25-90-124.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:45	17 s	0.2 s	88.6 MiB / 3297280	157.3 MiB / 3240556	
+17	40570	0	SUCCESS	NODE_LOCAL	20	phdrt-psp-hadoop25-90-124.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:46	16 s	74.0 ms	88.6 MiB / 3297280	157.3 MiB / 3240883	
+18	40572	0	SUCCESS	NODE_LOCAL	20	phdrt-psp-hadoop25-90-124.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:46	18 s	74.0 ms	88.6 MiB / 3297280	157.3 MiB / 3241065	
+19	40559	0	SUCCESS	NODE_LOCAL	8	phdrt-psp-hadoop05-90-100.di.seabanksvc.com	
+stdout
+stderr
+2026-06-05 11:09:45	13 s	0.1 s	88.6 MiB / 3297280	157.3 MiB / 3241057	
+Showing 1 to 20 of 11,367 entries
+Previous
+1
+2
+3
+4
+5
+…
+569
+Next
