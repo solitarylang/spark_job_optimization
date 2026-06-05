@@ -6,15 +6,10 @@
 
 ## 由子 skill 完成的工作
 
-- 读取 Spark UI / YARN / AM / driver / executor / eventlog 证据
-- 按顺序采集 `jobs`、`stages`、`executors`、`environment`、`sql`
-- 采集 `ApplicationMaster`、`driver`、`executor`、`YARN diagnostics`、failure reason 等补充日志
-- 标出执行时长、任务数、shuffle、失败、spill、preempt、dead executor、长尾、skew 等运行证据
-- 统计并标记超大 stage 数量；如果读取超过 10 亿行 / 2T 或运行超过 30 分钟的 stage 超过 4 个，要额外标出，供后续判断是否需要把部分 stage 落表
-- 如果某个 stage 的读取行数超过 10 亿，或者输入规模超过 2T，要额外标记为量级异常候选，并检查是否合理、是否存在重复扫描、字段/分区裁剪不足或中间表缺失
-- 对于运行时间超过 30 分钟的 job 或 stage，继续点击对应 stage，采集 task 级别的更细运行信息，包括 task duration 分布、失败 task、shuffle、spill、长尾和是否存在 skew
-- 按 `spark_ui_label_definition.sql` 的同级口径，顺手判定失败、重试、长时、排队、内存不足 / 浪费、skew、full GC、spill、任务健康等标签
-- 如果存在 `spark_ui/optimized_browser/`，再补优化前后对比
+- 直接调用 `subskills/spark-ui-reading/SKILL.md`，由子 skill 负责实际的 Spark UI / 日志分析
+- 由子 skill 采集并整理 `jobs`、`stages`、`executors`、`environment`、`sql`、`eventlog`、`AM`、`driver`、`executor`、`YARN diagnostics` 等证据
+- 由子 skill 在可直接确认时顺手捕获 SQL 原文、执行计划和对应 stage 关系
+- 由子 skill 输出可直接写入最终报告第 2 章的素材，包括运行证据、标签判定和优化前后对比项
 
 ## 输入
 
@@ -25,21 +20,15 @@
 - YARN application 链接或 Spark 运行日志链接
 - `subskills/spark-ui-reading/SKILL.md`
 
-## 采集顺序
-
-1. 如果输入是 YARN application 链接，先走 ApplicationMaster，再进入 Spark 运行日志页面。
-2. 如果输入已经是 Spark 运行日志链接，直接采集。
-3. 按顺序看 `jobs`、`stages`、`executors`、`environment`、`sql`。
-4. 需要时再补 `eventlog` 和其他原始日志。
-5. 如果某个环节读取行数超过 10 亿，或者输入规模超过 2T，先检查量级是否合理，再判断慢因。
-
 ## 子 skill 输出
 
 子 skill 的输出必须能直接写入最终报告第 2 章，至少包括：
 
 - 集群与环境信息
 - Jobs / Stages / Executors / SQL / EventLog / AM / Driver 证据
+- 可直接定位到的 SQL 原文、执行计划、对应 stage 关系
 - 关键 stage 的耗时、任务数、shuffle、失败、spill
+- 关键 stage 的 file listing、路径数、文件数或平均文件大小相关证据；如果能直接看出小文件特征，要一并写明
 - 运行时的 `已确认` / `待确认`
 - 如果存在优化后快照，还要保留前后对比项
 
@@ -48,6 +37,7 @@
 - 不在这里重新展开完整采集细则
 - 不在这里把推断写成已确认结论
 - 不在这里替代子 skill 直接下最终根因
+- 不在这里重复实现子 skill 已有的采集和判定规则
 
 ## 调用要求
 

@@ -25,6 +25,8 @@ description: 独立执行 Spark UI / YARN / driver / executor 日志分析，输
 5. 统计超大 stage 数量；如果读取超过 10 亿行 / 2T 或运行超过 30 分钟的 stage 超过 4 个，要标出这一事实，后续优先考虑部分 stage 落表 / 中间表化。
 5. 对于运行时间超过 30 分钟的 job 或 stage，必须继续点击对应 stage，采集 task 级别的更细运行信息，包括 task duration 分布、失败 task、shuffle、spill、长尾和是否存在 skew。
 6. 如果某个 stage 的读取行数超过 10 亿，或者输入规模超过 2T，要先做量级合理性检查；重点确认上游表规模、分区裁剪、字段裁剪、是否存在重复扫描，以及是否应该提前落中间表。
+7. 如果读取的数据量不大，但文件数很多，或者平均单文件大小小于 16M，要先做小文件判断；重点确认是否存在上游小文件、合并缺失、写入粒度过细或需要重建中间表。
+8. 如果运行日志或 Spark UI 能直接对应到具体 SQL，要把 SQL 原文和对应执行计划一起捕获下来，并标明它对应的 stage。
 
 ## 需要重点采集的运行信息
 
@@ -35,6 +37,7 @@ description: 独立执行 Spark UI / YARN / driver / executor 日志分析，输
 - 对于超过 30 分钟的 job / stage，必须下钻到对应 stage 的 task 详情，补充 task duration 分布、失败 task、最慢 task、shuffle、spill、长尾、skew 和是否存在明显不均衡
 - Executors：active / dead / total、负载是否均衡、GC / spill / shuffle / task time、loss reason
 - SQL：query plan、join / exchange / window / broadcast / stage 对应关系
+- 如果能直接定位到具体 SQL，要同时记录 SQL 原文、执行计划和对应 stage
 - EventLog：原始 stage / task / job 证据
 - AM / driver / executor / YARN diagnostics：`OOM`、`Killed by YARN`、`preempted`、`node lost`、`fetch failed`、`file not found`、`disk error`、`exit code`
 
@@ -91,6 +94,7 @@ description: 独立执行 Spark UI / YARN / driver / executor 日志分析，输
 - 如果只看到平均值，不要把平均值当成现场，优先记录 P95 / P99 或最慢 task。
 - 如果某个值没有直接暴露，就写 `待确认` 或 `未直接给出`。
 - 如果某个环节读取行数超过 10 亿，或者输入规模超过 2T，要先标成量级异常候选，再判断是否合理。
+- 如果读取的数据量不大，但文件数很多，或者平均单文件大小小于 16M，要先标成小文件候选，再判断是否合理。
 - 如果超大 stage 数量超过 4 个，要优先提示是否需要把部分 stage 落表 / 中间表化。
 
 ## 输出
