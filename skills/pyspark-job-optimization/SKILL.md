@@ -23,7 +23,7 @@ description: 用于通过源码和 Spark UI 日志分析 PySpark 任务，定位
 
 0. 采集集群资源和上游表上下文。
    使用 `scripts/collect_case_context.py` 和 `references/context-collection.md`。
-   如果 Spark UI 只能通过登录态浏览器访问，先用 `scripts/collect_spark_ui_browser.py` 采集页面文本，再跑 `collect_case_context.py`。
+   如果 Spark UI 只能通过登录态浏览器访问，先用 `scripts/collect_spark_ui_browser.py` 采集页面内容（优先保留表格块），再跑 `collect_case_context.py`。
 1. 调用源码分析子 skill，形成最终报告第 1 章素材。
    见 `subskills/source-reading/SKILL.md` 和 `references/step-1-source-reading.md`。
 2. 调用 Spark UI / 日志分析子 skill，形成最终报告第 2 章素材。

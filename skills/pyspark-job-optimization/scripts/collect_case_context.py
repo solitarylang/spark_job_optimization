@@ -73,6 +73,21 @@ def _normalize_space(value: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(value)).strip()
 
 
+def _extract_markdown_table_rows(text: str) -> List[List[str]]:
+    rows: List[List[str]] = []
+    for raw_line in text.splitlines():
+        line = html.unescape(raw_line).strip()
+        if not line.startswith("|") or line.count("|") < 2:
+            continue
+        cells = [_normalize_space(cell) for cell in line.strip("|").split("|")]
+        if len(cells) < 2:
+            continue
+        if all(re.fullmatch(r"[:\-\s]+", cell or "") for cell in cells):
+            continue
+        rows.append(cells)
+    return rows
+
+
 def _extract_environment_pairs(text: str) -> Dict[str, str]:
     pairs: Dict[str, str] = {}
     html_pairs = re.findall(r"<tr><td>(.*?)</td><td>(.*?)</td></tr>", text, flags=re.S)
@@ -82,6 +97,19 @@ def _extract_environment_pairs(text: str) -> Dict[str, str]:
             value_norm = _normalize_space(re.sub(r"<.*?>", "", value))
             if key_norm:
                 pairs[key_norm] = value_norm
+        return pairs
+
+    markdown_rows = _extract_markdown_table_rows(text)
+    for row in markdown_rows:
+        if len(row) < 2:
+            continue
+        left, right = row[0], row[1]
+        if left in {"Key", "Name", "Metric"} and right in {"Value", "Description"}:
+            continue
+        if left.startswith(("Jobs", "Stages", "Executors", "SQL", "Environment", "Storage")):
+            continue
+        pairs[left] = right
+    if pairs:
         return pairs
 
     # Browser-copied Spark UI pages are usually tab-delimited or one-row-per-line.

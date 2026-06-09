@@ -33,7 +33,7 @@ input/<case_name>/context/
 
 优先使用 `scripts/collect_case_context.py`。
 
-如果 Spark UI 只能通过用户登录态 Chrome 访问，就先用 `scripts/collect_spark_ui_browser.py` 把页面文本采集到 `spark_ui/browser/`，再对 case 目录运行 `collect_case_context.py`。
+如果 Spark UI 只能通过用户登录态 Chrome 访问，就先用 `scripts/collect_spark_ui_browser.py` 把页面内容采集到 `spark_ui/browser/`，尽量保留表格块为 Markdown table，再对 case 目录运行 `collect_case_context.py`。
 同一个 case 在分析阶段重复采集时，默认覆盖 `spark_ui/browser/` 这份当前快照；只有最终优化后重新抓取时，才另存到单独目录做前后对比。
 
 如果某个值不能自动采集，脚本要输出可手工查询的命令或 SQL。
@@ -45,10 +45,11 @@ input/<case_name>/context/
 1. 在用户的登录态 Chrome 会话里打开基础链接。
 2. 如果入口是 YARN application 链接，先采集 ApplicationMaster 日志页，再进入 Spark 运行日志页。
 3. 采集 `jobs`、`stages`、`executors`、`environment` 和 `sql` 页面。
-4. 保存每页可见文本，以及包含最终 URL 和标题的小清单。
-5. 再把采集文件喂给 `collect_case_context.py`。
+4. 对明显重要或运行超过 30 分钟的 job / stage，补采对应详情页和 task 级信息。
+5. 保存每页可见内容，优先保留表格块为 Markdown table，以及包含最终 URL 和标题的小清单。
+6. 再把采集文件喂给 `collect_case_context.py`。
 
-采集到的文本要当作证据，不要当作摘要。原始页面文本要留在 case 目录里。
+采集到的页面内容要当作证据，不要当作摘要。原始页面内容要留在 case 目录里，并尽量保留表格块和详情页。
 
 ## 兜底查询
 

@@ -34,18 +34,20 @@ input/<case_name>/
 - `executors.html`
 - `environment.html`
 
-如果是从登录态浏览器里采集的，可把复制出的页面文本放到：
+如果是从登录态浏览器里采集的，可把复制出的页面内容放到：
 
-- `spark_ui/browser/environment.txt`
-- `spark_ui/browser/jobs.txt`
-- `spark_ui/browser/stages.txt`
-- `spark_ui/browser/executors.txt`
-- `spark_ui/browser/sql.txt`
+- `spark_ui/browser/environment.md`
+- `spark_ui/browser/jobs.md`
+- `spark_ui/browser/stages.md`
+- `spark_ui/browser/executors.md`
+- `spark_ui/browser/sql.md`
+- `spark_ui/browser/details/` 下的重要 job / stage 详情页 Markdown
 - `spark_ui/browser/manifest.md`
 
 同一个 case 在分析阶段重复采集时，默认覆盖 `spark_ui/browser/` 这份当前快照，不要每次都新增并行目录。
 如果要保留最终优化后的对比版本，建议另存到单独目录，例如 `spark_ui/optimized_browser/`，并在 `notes.md` 里说明它是优化后快照。
 分析前的 Spark UI 视为“优化前快照”，优化完成后重新采集的 Spark UI 视为“优化后快照”，两者都要保留，方便做前后对比。
+浏览器采集时，表格块要尽量保留成 Markdown table，不要只保存为纯文本；如果某个 job / stage 明显重要或运行超过 30 分钟，要补抓对应详情页和 task 级信息。
 
 如果导出的文件名不同，就保留原名，并在 `notes.md` 里说明每个文件是什么。
 

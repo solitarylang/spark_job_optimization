@@ -12,7 +12,7 @@ description: 独立执行 Spark UI / YARN / driver / executor 日志分析，输
 ## 输入
 
 - `input/<case_name>/spark_ui/browser/`
-- `input/<case_name>/spark_ui/` 导出的页面文本或 HTML
+- `input/<case_name>/spark_ui/` 导出的页面内容、Markdown 或 HTML
 - `input/<case_name>/eventlog/`
 - YARN application 链接或 Spark 运行日志链接
 
@@ -27,6 +27,8 @@ description: 独立执行 Spark UI / YARN / driver / executor 日志分析，输
 6. 如果某个 stage 的读取行数超过 10 亿，或者输入规模超过 2T，要先做量级合理性检查；重点确认上游表规模、分区裁剪、字段裁剪、是否存在重复扫描，以及是否应该提前落中间表。
 7. 如果读取的数据量不大，但文件数很多，或者平均单文件大小小于 16M，要先做小文件判断；重点确认是否存在上游小文件、合并缺失、写入粒度过细或需要重建中间表。
 8. 如果运行日志或 Spark UI 能直接对应到具体 SQL，要把 SQL 原文和对应执行计划一起捕获下来，并标明它对应的 stage。
+9. 页面采集结果要尽量保留原有表格结构，优先输出为 Markdown table；不要只保存为纯文本换行，表格页必须能在输出里看出原有表结构。
+10. 对于明显重要或运行超过 30 分钟的 job / stage，要补抓对应详情页和 task 级信息，不能只停留在 overview。
 
 ## 需要重点采集的运行信息
 
@@ -38,6 +40,7 @@ description: 独立执行 Spark UI / YARN / driver / executor 日志分析，输
 - Executors：active / dead / total、负载是否均衡、GC / spill / shuffle / task time、loss reason
 - SQL：query plan、join / exchange / window / broadcast / stage 对应关系
 - 如果能直接定位到具体 SQL，要同时记录 SQL 原文、执行计划和对应 stage
+- 详情页：重要 job / stage 的详情页和 task 级信息，表格块尽量保留为 Markdown table，task 表不能只贴成纯文本
 - EventLog：原始 stage / task / job 证据
 - AM / driver / executor / YARN diagnostics：`OOM`、`Killed by YARN`、`preempted`、`node lost`、`fetch failed`、`file not found`、`disk error`、`exit code`
 
